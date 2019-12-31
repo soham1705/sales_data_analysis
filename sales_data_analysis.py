@@ -33,6 +33,7 @@ dataset['Quantity'] = [int(item) for item in dataset['Quantity']]
 dataset['Total Price'] = [float(item) for item in dataset['Total Price']]
 
 print()
+
 # 1. Total sales of store
 
 print("Total sales of store: "+str(sum(dataset['Total Price'])))
@@ -57,6 +58,7 @@ for month_numeric in sorted(month_name.keys()):
     print(("Total sales for {} : {}").format(month,total_sales_monthly[month]))
 
 print()
+
 # 3. Most popular item (most quantity sold) in each month
 
 monthly_item_sales = {month:{} for month in month_list}
@@ -79,6 +81,7 @@ for month_numeric in sorted(month_name.keys()):
     print("Most popular item of {} : {}".format(month, most_popular_item))
 
 print()
+
 # 4. Items generating most revenue in each month.
 
 monthly_item_revenues = {month:{} for month in month_list}
@@ -101,6 +104,7 @@ for month_numeric in sorted(month_name.keys()):
     print("Item generating most revenue in {} : {}".format(month, most_revenue_item))
 
 print()
+
 #5. For the most popular item, find the min, max and average number of orders each month.
 
 total_item_sales = {item:0 for item in list(set(dataset['SKU']))}
